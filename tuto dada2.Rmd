@@ -58,7 +58,7 @@ install.packages("BiocManager")
 BiocManager::install("dada2")
 ```
 
-```{r}
+```{r, eval=FALSE}
 library(dada2)
 library(phyloseq)
 library(DECIPHER)
