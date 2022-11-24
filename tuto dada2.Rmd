@@ -1,0 +1,86 @@
+---
+title: "tuto DADA2"
+output: guithub_document
+---
+
+```{bash, eval=FALSE}
+cd ~
+wget https://mothur.s3.us-east-2.amazonaws.com/wiki/miseqsopdata.zip
+unzip miseqsopdata.zip
+```
+
+
+```{r}
+install.packages("BiocManager")
+install.packages("ggplot2")
+install.packages("gridExtra")
+BiocManager::install("Rhtslib")
+BiocManager::install(c("dada2", "phyloseq", "DECIPHER", "phangorn"))
+```
+
+
+```{r}
+install.packages(c("shiny","miniUI", "caret", "pls", "e1071", "ggplot2", "randomForest", "dplyr", "ggrepel", "nlme", "devtools","reshape2", "PMA", "structSSI", "ade4","ggnetwork", "intergraph", "scales"))
+devtools::install_github(c("jfukuyama/phyloseqGraphTest"))
+BiocManager::install(c("genefilter", "impute"))
+```
+
+```{r}
+# Install CRAN packages (if not already installed)
+.inst <- .cran_packages %in% installed.packages()
+if (any(!.inst)){
+  install.packages(.cran_packages[!.inst],repos = "http://cran.rstudio.com/")
+}
+.inst <- .github_packages %in% installed.packages()
+if (any(!.inst)){
+  devtools::install_github(.github_packages[!.inst])
+}
+
+.inst <- .bioc_packages %in% installed.packages()
+if(any(!.inst)){
+  source("http://bioconductor.org/biocLite.R")
+  biocLite(.bioc_packages[!.inst])
+}
+```
+
+
+```{bash, eval=FALSE}
+sudo apt-get update -y
+sudo apt-get install -y libglpk-dev
+sudo apt-get install -y liblzma-dev libbz2-dev
+#sudo apt-get install libxtst6
+sudo apt-get install libxt6
+```
+
+# Install packages
+```{r}
+install.packages("BiocManager")
+BiocManager::install("dada2")
+```
+
+```{r}
+library(dada2)
+library(phyloseq)
+library(DECIPHER)
+library(phangorn)
+library(ggplot2)
+library(gridExtra)
+```
+
+```{r}
+# Install CRAN packages (if not already installed)
+.inst <- .cran_packages %in% installed.packages()
+if (any(!.inst)){
+  install.packages(.cran_packages[!.inst],repos = "http://cran.rstudio.com/")
+}
+.inst <- .github_packages %in% installed.packages()
+if (any(!.inst)){
+  devtools::install_github(.github_packages[!.inst])
+}
+
+.inst <- .bioc_packages %in% installed.packages()
+if(any(!.inst)){
+  source("http://bioconductor.org/biocLite.R")
+  biocLite(.bioc_packages[!.inst])
+}
+```
