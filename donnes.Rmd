@@ -1,0 +1,17 @@
+---
+title: "donnes"
+output: github_document
+---
+```{bash}
+wget https://mothur.s3.us-east-2.amazonaws.com/wiki/miseqsopdata.zip
+unzip miseqsopdata.zip
+```
+
+```{bash}
+wget https://zenodo.org/record/4310151/files/rdp_train_set_18.fa.gz?download=1
+gunzip rdp_train_set_18.fa.gz?download=1
+```
+
+```{bash}
+wget https://zenodo.org/record/4310151/files/rdp_species_assignment_18.fa.gz?download=1
+gunzip rdp_species_assignment_18.fa.gz?download=1
